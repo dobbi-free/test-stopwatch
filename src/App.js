@@ -1,8 +1,9 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Button, Grid, Typography } from "@material-ui/core";
-import {interval, Observable, scan, startWith, takeUntil, takeWhile} from "rxjs";
-const stream$ = interval(1000)
+import { interval, scan, startWith } from "rxjs";
+
+const stream$ = interval(1000);
 function App() {
   const [time, setTime] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
@@ -73,7 +74,7 @@ function App() {
             color="secondary"
             onDoubleClick={stop}
           >
-            Stop
+            Wait
           </Button>
         </Grid>
         <Grid container justifyContent="center" alignItems="center" xs={2}>
